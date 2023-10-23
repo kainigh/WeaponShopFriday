@@ -28,7 +28,7 @@ using namespace std;
 
 
 
-class Character:Creature
+class Character
 {
 
 private:
@@ -50,11 +50,13 @@ public:
 	~Character();
 	void Intro();
 	int GetLifePoints();
+	float GetMoney();
+	void SetMoney(float newMoney);
 	void SetLifePoints(int lifePoints);
 	float Buy(Merchant& merchant, Weapon weapon);
 	void Sell(Merchant& merchant, Weapon weapon);
 	void Use(Weapon weaponUsed, Character otherCharater);
-	void Loot();
+	void Loot(Character otherCharacter);
 
 };
 

@@ -5,6 +5,7 @@
 #include "Character.h"
 #include "Merchant.h"
 #include "Weapon.h"
+#include "Attack.h"
 
 
 #include <iostream>
@@ -30,7 +31,9 @@ int main()
 
 
     Character player1 = Character("K", "N", "Hello", 1000.0f, 100, weapon4, RaceType::ELF, ClassType::ARCHER);
-    Character player2 = Character("Clark", "Kent", "I don't like Kryptonite", 1000.f, 100, weapon2, RaceType::HUMAN, ClassType::WARRIOR);
+    Character player2 = Character("Clark", "Kent", "I don't like Kryptonite", 1000.f, 10, weapon2, RaceType::HUMAN, ClassType::WARRIOR);
+
+    Attack att;
 
     merchant1.AddWeapon(weapon1);
     merchant1.AddWeapon(weapon2);
@@ -47,27 +50,55 @@ int main()
 
     cin >> buyWeapon;
 
+    while (buyWeapon != "NO")
+    {
+
+        cout << "You have chosen " << buyWeapon << endl << endl;
+
+        weaponBought = merchant1.DisplayWeaponChoice(buyWeapon);
+
+        player1.Buy(merchant1, weaponBought);
+
+        cout << "Would you like to buy another weapon? If not type NO." << endl;
+        cout << "Weapon Name: ";
+        cin >> buyWeapon;
+
+    }
+    
     //weaponSelected.SetName(buyWeapon);
-
-
-    cout << "You have chosen " << buyWeapon << endl << endl;
-
-    weaponBought = merchant1.DisplayWeaponChoice(buyWeapon);
-
-    player1.Buy(merchant1, weaponBought);
-
+         
     cout << "Player would like to sell a weapon." << endl;
     cout << "Weapon Name: ";
-
     cin >> sellWeapon;
 
-    cout << "Player is selling " << sellWeapon << endl << endl;
 
-    weaponSold = merchant1.DisplayWeaponChoice(sellWeapon);
+    while (sellWeapon != "NO")
+    {
 
-    player1.Sell(merchant1, weaponSold);
+        cout << "Player is selling " << sellWeapon << endl << endl;
+
+        weaponSold = merchant1.DisplayWeaponChoice(sellWeapon);
+
+        player1.Sell(merchant1, weaponSold);
+
+        cout << "Would player like to sell another weapon? If not type NO." << endl;
+        cout << "Weapon Name: ";
+
+        cin >> sellWeapon;
+
+
+    }
+
+    
 
     player1.Use(weapon2, player2);
+
+    player1.Loot(player2);
+
+    att.randomNumber();
+
+
+
 
     //merchant1.Sell(player1, weapon4);
 

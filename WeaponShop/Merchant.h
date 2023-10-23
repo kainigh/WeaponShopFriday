@@ -1,5 +1,6 @@
 #pragma once
 #include "Weapon.h"
+//#include "Character.h"
 #include <vector>
 #include <string>
 using namespace std;
@@ -32,7 +33,7 @@ public:
 	Weapon DisplayWeaponChoice(string weaponName);
 	float Buy(Weapon weapon);
 
-	//void Sell(Character& player, Weapon weapon);
+	//void Sell(Character player, Weapon weapon);
 
 };
 

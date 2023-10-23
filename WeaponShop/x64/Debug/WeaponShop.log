@@ -1,16 +1,2 @@
-﻿  Character.cpp
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.h(34,12): error C2061: syntax error: identifier 'Character'
-  Merchant.cpp
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.h(34,12): error C2061: syntax error: identifier 'Character'
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(60,23): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(87,23): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(147,30): error C2761: 'void Merchant::Sell(void)': redeclaration of member is not allowed
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(147,21): error C2065: 'Character': undeclared identifier
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(147,32): error C2065: 'player': undeclared identifier
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(147,40): error C2275: 'Weapon': expected an expression instead of a type
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(147,47): error C2146: syntax error: missing ')' before identifier 'weapon'
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(148,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.cpp(148,1): error C2447: '{': missing function header (old-style formal list?)
-  WeaponShop.cpp
-C:\Users\kai.nigh\source\repos\WeaponShop\WeaponShop\Merchant.h(34,12): error C2061: syntax error: identifier 'Character'
-  Generating Code...
+﻿  Weapon.cpp
+  WeaponShop.vcxproj -> C:\Users\kai.nigh\source\repos\WeaponShop\x64\Debug\WeaponShop.exe

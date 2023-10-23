@@ -9,7 +9,7 @@ Weapon::Weapon()
 	description = "long, wooden";
 	weight = 5;
 	damages = 0;
-	cost = 1000.0f;
+	cost = 10.0f;
 	durability = 1.0f;
 	weaponUsed = WeaponType::STAFF;
 

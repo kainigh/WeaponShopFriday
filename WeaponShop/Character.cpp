@@ -36,6 +36,18 @@ int Character::GetLifePoints()
 	return life;
 }
 
+float Character::GetMoney()
+{
+
+	return money;
+
+}
+
+void Character::SetMoney(float newMoney)
+{
+	money = newMoney;
+}
+
 void Character::SetLifePoints(int lifePoints)
 {
 	life = lifePoints;
@@ -94,21 +106,43 @@ void Character::Sell(Merchant& merchant, Weapon weapon)
 
 }
 
-void Character::Use(Weapon weaponUsed, Character otherCharater)
+void Character::Use(Weapon weaponUsed, Character otherCharacter)
 {
 	
-	otherCharater.life -= 1;
+	otherCharacter.life -= 1;
 	weaponUsed.SetDurability();
 
-	cout << "Other Character Life: " << otherCharater.life << endl;
+	cout << "Other Character Life: " << otherCharacter.life << endl;
 	cout << "Weapon Durability is now " << weaponUsed.GetDurability() << endl;
 
 	//_weapon.Use();
 
 }
 
-void Character::Loot()
+void Character::Loot(Character otherCharacter)
 {
+	//Check if otherCharacter life is less than or equal zero.
+	//If life is less than or equal zero, add otherCharacter money and weapon the this Character
+
+	if (otherCharacter.GetLifePoints() <= 0)
+	{
+		money += otherCharacter.GetMoney();
+		
+
+
+		cout << "Player looted " << otherCharacter.GetMoney() << " of money" << endl;
+		cout << "Player now has " << money << " total money" << endl;
+
+		otherCharacter.SetMoney(0);
+
+
+
+	}
+	else
+	{
+		cout << "You cannot loot this player. They are not dead. Their life is: " << otherCharacter.GetLifePoints() << endl;
+
+	}
 
 
 }

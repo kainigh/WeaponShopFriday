@@ -10,7 +10,7 @@ using namespace std;
 Merchant::Merchant()
 {
 	merchantName = "Shopkeeper";
-	shopName = "Weapns R Us";
+	shopName = "Weapons R Us";
 	description = "";
 	catchphrase = "Welcome to my shop..We have it all!";
 	money = 100;
@@ -74,8 +74,11 @@ void Merchant::Display()
 		cout << endl;
 
 
+
 	}
 	cout << endl;
+	
+	
 
 }
 
@@ -106,13 +109,16 @@ Weapon Merchant::DisplayWeaponChoice(string weaponName)
 			break;
 
 		}
-		/*
-		else
-		{
-			cout << "I do not have " << weaponName << " in my inventory " << endl;
 
+
+		if (i == vecSize - 1)
+		{
+			cout << "Sorry!! I do not have a weapon named: " << weaponName << endl;
+			
 		}
-		*/
+
+		
+		
 			
 
 	}
@@ -144,7 +150,7 @@ float Merchant::Buy(Weapon weapon)
 }
 
 /*
-void Merchant::Sell(Character& player, Weapon weapon)
+void Merchant::Sell(Character player, Weapon weapon)
 {
 
 	int costOfWeaponSold;
@@ -154,7 +160,7 @@ void Merchant::Sell(Character& player, Weapon weapon)
 	
 
 }
-
 */
+
 
 

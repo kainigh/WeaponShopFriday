@@ -1,20 +1,13 @@
 #pragma once
 
-//#include "Attack.h"
+#include "Attack.h"
 
 #include <string>
 #include <vector>
 
 using namespace std;
 
-enum class DamageType {
 
-	BLUDGEONING,
-	SLASHING,
-	PIERCING,
-	BURNING
-
-};
 
 class Creature
 {
@@ -26,13 +19,17 @@ private:
 	int healthPoints;
 	int defenseScore;
 
-	//vector<Attack>attacks;
+	vector<Attack>attacks;
 
 
 
 public:
 	Creature();
+	Creature(string creatureName, string creatureDescription, int creatureHealth, int creatureDefenseScore);
 	~Creature();
+	int GetDefenseScore();
+	void AttackCreature(Creature otherCreature);
+	void Heal();
 
 };
 

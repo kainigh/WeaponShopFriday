@@ -6,6 +6,12 @@
 class Monster:Creature
 {
 
+private:
+
+
+public:
+
+
 
 };
 

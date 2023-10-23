@@ -2,22 +2,29 @@
 
 #include <string>
 #include "Weapon.h"
-#include "Creature.h"
 
 using namespace std;
+
+enum class DamageType {
+
+	BLUDGEONING,
+	SLASHING,
+	PIERCING,
+	BURNING
+
+};
+
 
 class Attack
 {
 
 private:
-
-
 	string name;
-	//Weapon attackWeapon;
+	WeaponType attackWeapon;
 	int damagePoints;
 	DamageType damage;
 	int attackBonus;
-	int points;
+	
 
 
 
@@ -25,8 +32,10 @@ public:
 
 	Attack();
 	~Attack();
+	Attack(string attackName, WeaponType weapon, int damages, DamageType damageType, int bonus);
 
-	int randomNumber();
+	void randomNumber();
+	void Resolve();
 
 };
 
